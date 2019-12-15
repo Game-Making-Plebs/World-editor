@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+header {
+    background: #66F5FF;
+}
+header h1 {
+    margin-top: 0;
+}
+div#topbar {
+    height: 20px;
+    background: #fff;
+}
+div#canvas {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    height: 950px;
+    width: 941px;
+    border: solid black 1px;
+}
+div#sidebar {
+    display: none;
+    height: 950px;
+    width: 941px;
+    border: solid black 1px;
+}
+
+div.bauble {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "editor",
+  "version": "1.0.0",
+  "description": "Editor for my text adventure game world",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Wetski",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^7.1.4"
+  },
+  "dependencies": {
+    "jsplumb": "^2.12.8"
+  }
+}
