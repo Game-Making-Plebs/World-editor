@@ -3,27 +3,24 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bauble.css">
     <link rel="stylesheet" type="text/css" href="context-menu.css">
     <title>Text-Adventure Editor</title>
-    <script src="editor.js"></script>
-    <script src="bauble.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Text Adventure world editor</h1>
-    </header>
+  </head>
+  <body>
     <div id="topbar">
-        <button onclick="loadFile()">
-            load
-        </button>
+      <button onclick="loadFile()">
+        Load
+      </button>
     </div>
     <div id="canvas">
     </div>
-    <div id="sidebar"></div>
-    <footer></footer>
+    <div id="sidebar">
+    </div>
+
 
     <div class="menu">
-        <ul class="menu-options">
+      <ul class="menu-options">
           <li id="menu-action-0" class="menu-option">Add a bauble</li>
           <li id="menu-action-1" class="menu-option">Select all</li>
           <li id="menu-action-0" class="menu-option">Save</li>
@@ -45,6 +42,8 @@
             <li class="menu-option">Inspect</li>
           </ul>-->
       </div>
+      <script src="editor.js"></script>
+      <script src="baubleUtils.js"></script>
       <script src="context-menu.js"></script>
 </body>
 </html>

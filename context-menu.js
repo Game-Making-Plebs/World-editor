@@ -1,6 +1,6 @@
 const menu = document.querySelector(".menu");
 const menuOptions = document.querySelectorAll(".menu-option");
-const canvas = document.getElementById("canvas");
+
 let menuVisible = false;
 let canvasClick = false;
 
@@ -24,7 +24,7 @@ const actionSelector = event => {
     console.log(event);
     switch(event.target.id) {
         case "menu-action-0":
-            bauble.newBauble({left: event.pageX, top: event.pageY});
+            baubleUtils.newBauble({left: event.pageX, top: event.pageY});
             break;
         case "menu-action-1":
             break;

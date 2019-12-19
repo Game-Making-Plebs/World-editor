@@ -1,16 +1,31 @@
+require('jquery')
+require('bootstrap')
 const jsp = require('jsplumb');
-let nonPlumbing = {};
-let elementCounter = 0;
 
-jsPlumb.bind("ready", function(){
-    jsPlumb.setContainer("canvas");
-    nonPlumbing = jsPlumb.getInstance();
+const canvas = document.getElementById("canvas");
+
+let elementCounter = 0;
+let hoverSelection = {};
+let primarySelected = {};
+let selected = [];
+let defaultEndpointOptions = {};
+
+jsp.jsPlumb.bind("ready", function(){
+    nonPlumbing = jsPlumb.getInstance({
+        Endpoint: ["Dot", {radius: 4}],
+        Connector: "Straight",
+        HoverPaintStyle: {strokeWidth: 3},
+        Container: "canvas"
+    });
+    defaultEndpointOptions = {
+        endpoint:"Dot",
+        paintStyle:{radius: 4, fill:'#666'},
+        isSource:true,
+        connectorStyle:{stroke:"#666"},
+        isTarget:true
+    };
+    canvas.addEventListener("click", e => {
+        primarySelected = {};
+    });
 });
 
-loadFile = () => {
-    fetch("http://localhost/test.json")
-        .then(response => response.text())
-        .then((data) => {
-            console.log(data)
-        })
-}

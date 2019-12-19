@@ -1,0 +1,25 @@
+div.bauble {
+    height: 68px;
+    width: 68px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100%;
+    background: #fff;
+    z-index: 1;
+    overflow: auto;
+}
+
+div.bauble div.connection-pull-point {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    vertical-align: bottom;
+    height: 20px;
+    background: #fff;
+    overflow: hidden;
+}
+
+div.bauble:hover div.connection-pull-point {
+    background: rgb(121, 121, 121);
+}
