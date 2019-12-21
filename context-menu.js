@@ -24,7 +24,7 @@ const actionSelector = event => {
     console.log(event);
     switch(event.target.id) {
         case "menu-action-0":
-            baubleUtils.newBauble({left: event.pageX, top: event.pageY});
+            newNode({left: event.pageX, top: event.pageY});
             break;
         case "menu-action-1":
             break;
